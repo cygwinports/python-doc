@@ -1,0 +1,20 @@
+NAME="python-doc"
+VERSION=2.7.3
+RELEASE=1
+CATEGORY="Python Doc"
+SUMMARY="Python HTML documentation"
+DESCRIPTION="Python is an interpreted, interactive object-oriented programming
+language suitable (amongst other uses) for distributed application development,
+scripting, numeric computing and system testing.  Python is often compared to
+Tcl, Perl, Java, JavaScript, Visual Basic or Scheme."
+HOMEPAGE="http://www.python.org/"
+SRC_URI="http://docs.python.org/ftp/python/doc/${VERSION}/python-${VERSION}-docs-html.tar.bz2"
+SRC_DIR="python-${VERSION}-docs-html"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	docinto /python/html
+	dodoc $(find -mindepth 1 -maxdepth 1 ! -name CYGWIN-PATCHES)
+}
