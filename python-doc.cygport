@@ -1,7 +1,7 @@
 NAME="python-doc"
-VERSION=2.7.3
+VERSION=2.7.9
 RELEASE=1
-CATEGORY="Python Doc"
+CATEGORY="Doc"
 SUMMARY="Python HTML documentation"
 DESCRIPTION="Python is an interpreted, interactive object-oriented programming
 language suitable (amongst other uses) for distributed application development,
@@ -10,6 +10,8 @@ Tcl, Perl, Java, JavaScript, Visual Basic or Scheme."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://docs.python.org/ftp/python/doc/${VERSION}/python-${VERSION}-docs-html.tar.bz2"
 SRC_DIR="python-${VERSION}-docs-html"
+
+ARCH=noarch
 
 src_compile() { :; }
 
