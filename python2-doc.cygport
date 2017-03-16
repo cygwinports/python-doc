@@ -1,4 +1,4 @@
-NAME="python-doc"
+NAME="python2-doc"
 VERSION=2.7.12
 RELEASE=1
 CATEGORY="Doc"
@@ -12,12 +12,13 @@ SRC_URI="http://docs.python.org/ftp/python/doc/${VERSION}/python-${VERSION}-docs
 SRC_DIR="python-${VERSION}-docs-html"
 
 ARCH=noarch
+OBSOLETES="python-doc"
 RESTRICT="postinst-doc"
 
 src_compile() { :; }
 
 src_install() {
 	cd ${S}
-	docinto /python/html
+	docinto /python2/html
 	dodoc $(find -mindepth 1 -maxdepth 1 ! -name CYGWIN-PATCHES)
 }
