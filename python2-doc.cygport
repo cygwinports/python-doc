@@ -1,8 +1,8 @@
 NAME="python2-doc"
-VERSION=2.7.13
+VERSION=2.7.15
 RELEASE=1
 CATEGORY="Doc"
-SUMMARY="Python HTML documentation"
+SUMMARY="Python 2.7 HTML documentation"
 DESCRIPTION="Python is an interpreted, interactive object-oriented programming
 language suitable (amongst other uses) for distributed application development,
 scripting, numeric computing and system testing.  Python is often compared to
@@ -19,6 +19,6 @@ src_compile() { :; }
 
 src_install() {
 	cd ${S}
-	docinto /python2/html
-	dodoc $(find -mindepth 1 -maxdepth 1 ! -name CYGWIN-PATCHES)
+	docinto /${NAME%-doc}/html
+	dodoc *
 }
